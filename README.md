@@ -90,7 +90,7 @@ Subnet terdekatnya adalah A2, A3, dan A9 untuk itu dia perlu dikenalkan dengan s
 Sehingga kita hanya perlu menambahkan routing pada A4, A10 dan Default Routing
 <img src="VLSM/Picture13.png" width="500" >
 
-- Lakukan routing pada setiap router
+- Melakukan routing pada setiap router sesuai data pada tabel 3 diatas
 
 #### 4. Testing
 
