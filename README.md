@@ -31,10 +31,10 @@ Dari pohon dari pohon tersebut akan diperoleh pembagian IP sesuai pada **Tabel 2
 
 
 ### Praktik
-#### Membuat Topologi
+#### 1. Membuat Topologi
 <img src="VLSM/Picture6.png" width="600" >
 
-#### Subnetting
+#### 2. Subnetting
 
 Mengatur IP untuk masing-masing interface yang ada di setiap device sesuai dengan pembagian subnet pada pohon VLSM diatas tadi
 Interface dapat diatur pada menu Config > INTERFACE > “nama interface”.
@@ -55,8 +55,8 @@ Misal **subnet A8** Mengatur IP pada interface BATU yang mengarah ke client NGAN
 dan mengatur IP pada interfaces client NGANJUK yakni 192.168.12.2 dan IP Gateway yang mengarah ke BATU yakni 192.168.12.1
 <img src="VLSM/Picture10.png" width="500" >
 
-#### Interface Router - Server, 
-konfigurasinya sama seperti Router - Client tetapi menggunakan IP DMZ masing-masing kelompok dan dibagi 2 karena server berada pada subnet yang berbeda.
+#### Interface Router - Server
+Konfigurasinya sama seperti Router - Client tetapi menggunakan IP DMZ masing-masing kelompok dan dibagi 2 karena server berada pada subnet yang berbeda.
 IP DMZ kelompok kami adalah 10.151.77.40 sehingga untuk server MOJOKERTO dihasilkan IP dengan range antara 10.151.77.40-10.151.77.43 dan server MALANG 10.151.77.44-10.151.77.47.
 Misal untuk interface SURABAYA yang mengarah ke MOJOKERTO, maka digunakan IP 10.151.77.41
 
@@ -69,10 +69,36 @@ Setelah melakukan konfigurasi alamat IP pada setiap interfaces, maka langkah sel
 
 <br>
 
-#### Routing
+#### 3. Routing
+##### Tabel 3. Routing
+
+
 
 <img src="VLSM/Picture4.png" width="500" >
 
+
+
+- Routing dapat dilakukan pada menu Config > Routing > Static pada device Router.
+
+- Routing dilakukan dengan menambahkan NID, Netmask, dan Gateway dari router lain yang tidak terhubung langsung dengan Router tersebut
+
+- SURABAYA merupakan router utama karena terhubung langsung dengan internet, untuk itu router yang berada dibawahnya perlu ditambahkan default routing agar router dapat mengirimkan paket sesuai dengan tujuan. 
+
+- Misal pada router PASURUAN
+Subnet terdekatnya adalah A2, A3, dan A9 untuk itu dia perlu dikenalkan dengan subnet lain, yaitu A4, A10, dan subnet yang terhubung dengan router utama(SURABAYA).
+
+Sehingga kita hanya perlu menambahkan routing pada A4, A10 dan Default Routing
+<img src="VLSM/Picture13.png" width="500" >
+
+- Lakukan routing pada setiap router
+
+#### 4. Testing
+
+Testing dilakukan dengan cara ping dari client ke IP tujuan atau menggunakan tombol dengan ikon surat pada toolbar.
+
+Berikut adalah beberapa contoh hasil testing :
+
+<img src="VLSM/Picture14.png" width="500" >
 
 
 ## 2. UML dengan Metode CIDR
