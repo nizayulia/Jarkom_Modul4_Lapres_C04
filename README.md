@@ -17,7 +17,7 @@ Mentukan jumlah subnet yang ada di dalam topologi
 <img src="VLSM/Picture1.png" width="800">
 
 
-Lalu menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan melakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan dengan melihat pada tabel subnet.
+Lalu menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan melakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan dengan melihat pada [Tabel 1](#tabel-1-subnetting).
 ##### Tabel 2. Pembagian IP
 <img src="VLSM/Picture3.png" width="600" >
 
@@ -27,7 +27,7 @@ Berdasarkan total IP dan netmask yang dibutuhkan, maka kita dapat menggunakan ne
 Subnet besar yang dibentuk memiliki NID 192.168.0.0 dengan netmask /19. Lalu Hitung pembagian IP berdasarkan NID dan netmask tersebut menggunakan pohon seperti gambar di bawah dan lakukan subnetting dengan menggunakan pohon tersebut untuk pembagian IP sesuai dengan kebutuhan masing-masing subnet yang ada.
 <img src="VLSM/Picture5.png" >
 
-Dari pohon dari pohon tersebut akan diperoleh pembagian IP sesuai pada **Tabel 2. Pembagian IP** diatas
+Dari pohon dari pohon tersebut akan diperoleh pembagian IP sesuai pada [Tabel 2](#tabel-2-pembagian-ip) diatas
 
 
 ### Praktik
@@ -40,7 +40,7 @@ Mengatur IP untuk masing-masing interface yang ada di setiap device sesuai denga
 Interface dapat diatur pada menu Config > INTERFACE > “nama interface”.
 
 #### Interface Router - Router
-Misal pada **subnet A5** SURABAYA yang mengarah ke BATU dengan **eth1/1** lalu isi dengan data sesuai **Tabel 2. Pembagian IP** disini kita menggunakan NID+1 yaitu 192.168.0.5.
+Misal pada **subnet A5** SURABAYA yang mengarah ke BATU dengan **eth1/1** lalu isi dengan data sesuai [Tabel 2](#tabel-2-pembagian-ip) disini kita menggunakan NID+1 yaitu 192.168.0.5.
 
 <img src="VLSM/Picture7.png" width="500" >
 
@@ -90,7 +90,7 @@ Subnet terdekatnya adalah A2, A3, dan A9 untuk itu dia perlu dikenalkan dengan s
 Sehingga kita hanya perlu menambahkan routing pada A4, A10 dan Default Routing
 <img src="VLSM/Picture13.png" width="500" >
 
-- Melakukan routing pada setiap router sesuai data pada tabel 3 diatas
+- Melakukan routing pada setiap router sesuai data pada [Tabel 3](#tabel-3-routing) diatas
 
 #### 4. Testing
 
